@@ -6,34 +6,11 @@ import type {
 } from '../types.js';
 import { GeocodingError, WeatherError } from '../types.js';
 import type { StateManager } from './StateManager.js';
-
-// ── Error message maps ────────────────────────────────────────────────────────
-
-/**
- * Maps a GeocodingError kind to its user-facing message.
- * (Design — Error Handling table, Req 5.6, 5.7)
- */
-function mapGeocodingError(kind: GeocodingError['kind']): string {
-  switch (kind) {
-    case 'NOT_FOUND':
-      return 'No se encontró la ciudad ingresada. Verifica el nombre y vuelve a intentarlo.';
-    case 'NETWORK':
-      return 'El servicio de geocodificación no está disponible. Verifica tu conexión a internet e inténtalo de nuevo.';
-  }
-}
-
-/**
- * Maps a WeatherError kind to its user-facing message.
- * (Design — Error Handling table, Req 5.6, 5.7)
- */
-function mapWeatherError(kind: WeatherError['kind']): string {
-  switch (kind) {
-    case 'NETWORK':
-      return 'El servicio meteorológico no está disponible. Verifica tu conexión a internet e inténtalo de nuevo.';
-    case 'INCOMPLETE_DATA':
-      return 'Los datos meteorológicos recibidos están incompletos. Inténtalo de nuevo en unos momentos.';
-  }
-}
+import {
+  GEOCODING_ERROR_MESSAGES,
+  UNKNOWN_ERROR_MESSAGE,
+  WEATHER_ERROR_MESSAGES,
+} from '../errorMessages.js';
 
 // ── Implementation ────────────────────────────────────────────────────────────
 
@@ -92,12 +69,12 @@ export class WeatherControllerImpl implements WeatherController {
     } catch (error) {
       // Step 5: Map the error to a user-facing message
       if (error instanceof GeocodingError) {
-        this.stateManager.setServiceError(mapGeocodingError(error.kind));
+        this.stateManager.setServiceError(GEOCODING_ERROR_MESSAGES[error.kind]);
       } else if (error instanceof WeatherError) {
-        this.stateManager.setServiceError(mapWeatherError(error.kind));
+        this.stateManager.setServiceError(WEATHER_ERROR_MESSAGES[error.kind]);
       } else {
         // Unknown / unexpected error (Req 5.6)
-        this.stateManager.setServiceError('Error desconocido. Inténtalo de nuevo.');
+        this.stateManager.setServiceError(UNKNOWN_ERROR_MESSAGE);
       }
     } finally {
       // Step 6: Always hide the loading indicator (Req 5.5)

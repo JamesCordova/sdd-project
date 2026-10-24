@@ -211,7 +211,7 @@ describe('WeatherServiceImpl — property tests', () => {
     await fc.assert(
       fc.asyncProperty(
         // Pick which fields to corrupt (at least 1 of the 3)
-        fc.subarray(ALL_FIELDS, { minLength: 1 }),
+        fc.subarray([...ALL_FIELDS], { minLength: 1 }),
         // Valid numeric values for all three fields (used for the non-corrupted ones)
         fc.float({ noNaN: true, noDefaultInfinity: true }),
         fc.integer({ min: 0, max: 100 }),

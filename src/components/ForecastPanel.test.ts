@@ -201,3 +201,40 @@ describe('ForecastPanel – P8: renders all fields with correct units for any Fo
     );
   });
 });
+
+// Feature: weather-forecast-app, Property 9: Nueva búsqueda reemplaza el pronóstico anterior
+describe('ForecastPanel – P9: a new forecast replaces the previous one', () => {
+  it('after updating with a second forecast only the second city data is shown', () => {
+    // Validates: Requirements 4.5
+    const forecastDataArb = fc.record({
+      cityName: fc.string({ minLength: 1, maxLength: 100 }),
+      temperatureCelsius: fc.float({ noNaN: true, min: -100, max: 60 }),
+      relativeHumidityPercent: fc.integer({ min: 0, max: 100 }),
+      precipitationMm: fc.float({ noNaN: true, min: 0, max: 500 }),
+    });
+
+    fc.assert(
+      fc.property(
+        fc.tuple(forecastDataArb, forecastDataArb).filter(([a, b]) => a.cityName !== b.cityName),
+        ([first, second]) => {
+          const panel = new ForecastPanel();
+          panel.update(first);
+          panel.update(second);
+
+          const el = panel.getElement();
+          return (
+            el.style.display !== 'none' &&
+            el.querySelector('[data-field="city-name"]')?.textContent === second.cityName &&
+            el.querySelector('[data-field="temperature"]')?.textContent ===
+              `${second.temperatureCelsius} °C` &&
+            el.querySelector('[data-field="humidity"]')?.textContent ===
+              `${second.relativeHumidityPercent} %` &&
+            el.querySelector('[data-field="precipitation"]')?.textContent ===
+              `${second.precipitationMm} mm`
+          );
+        },
+      ),
+      { numRuns: 100 },
+    );
+  });
+});

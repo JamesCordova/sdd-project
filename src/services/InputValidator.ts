@@ -1,4 +1,5 @@
 import type { InputValidator } from '../types';
+import { VALIDATION_EMPTY_INPUT } from '../errorMessages';
 
 /** Validates city name user input. */
 export class InputValidatorImpl implements InputValidator {
@@ -10,7 +11,7 @@ export class InputValidatorImpl implements InputValidator {
     if (cityName.trim().length > 0) {
       return null;
     }
-    return 'El nombre de la ciudad es requerido.';
+    return VALIDATION_EMPTY_INPUT;
   }
 }
 

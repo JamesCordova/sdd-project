@@ -66,7 +66,7 @@ Implementación incremental de una SPA client-side en TypeScript con arquitectur
     - Verificar que siempre se lanza `WeatherError('INCOMPLETE_DATA')` y nunca se construye un `ForecastData`
     - **Validates: Requirements 3.3, 4.6**
 
-- [~] 5. Checkpoint — Verificar servicios y validador
+- [x] 5. Checkpoint — Verificar servicios y validador
   - Asegurarse de que todos los tests de las tareas 2–4 pasan. Preguntar al usuario si tiene dudas.
 
 - [x] 6. Implementar `StateManager`
@@ -104,10 +104,10 @@ Implementación incremental de una SPA client-side en TypeScript con arquitectur
     - Verificar que `isLoading` es `true` durante toda la solicitud y `false` una vez terminada, independientemente del resultado
     - **Validates: Requirements 2.6, 3.5, 5.5**
 
-- [~] 8. Checkpoint — Verificar capa de aplicación
+- [x] 8. Checkpoint — Verificar capa de aplicación
   - Asegurarse de que todos los tests de las tareas 6–7 pasan. Preguntar al usuario si tiene dudas.
 
-- [ ] 9. Implementar componente `SearchBar`
+- [x] 9. Implementar componente `SearchBar`
   - [x] 9.1 Implementar el componente `SearchBar`
     - Renderizar `City_Input` (maxlength=100) y `Search_Button`
     - Emitir el evento `onSearch(cityName)` al hacer clic en el botón o pulsar Enter con el input enfocado
@@ -115,25 +115,25 @@ Implementación incremental de una SPA client-side en TypeScript con arquitectur
     - Limpiar `validationError` al modificar el contenido del input mediante callback al padre
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 5.3, 5.4_
 
-  - [-] 9.2 Escribir test de propiedad P1 para `SearchBar`
+  - [x] 9.2 Escribir test de propiedad P1 para `SearchBar`
     - **Property 1: Límite de caracteres en el input**
     - Generador: `fc.string({ maxLength: 200 })`
     - Verificar que el valor almacenado/emitido por `City_Input` nunca supera los 100 caracteres; para strings ≤ 100 se almacena completo; para strings > 100 solo los primeros 100
     - **Validates: Requirements 1.3**
 
-  - [-] 9.3 Escribir test de propiedad P3 para `SearchBar`
+  - [x] 9.3 Escribir test de propiedad P3 para `SearchBar`
     - **Property 3: Editar el input limpia el error de validación**
     - Generador: `fc.string({ minLength: 1 })`
     - Simular estado con `validationError !== null`, aplicar cualquier modificación al input, verificar que `validationError` se vuelve `null`
     - **Validates: Requirements 1.6**
 
-  - [-] 9.4 Escribir test de propiedad P10 para `SearchBar`
+  - [x] 9.4 Escribir test de propiedad P10 para `SearchBar`
     - **Property 10: Estado del botón refleja el estado de carga**
     - Generador: `fc.boolean()` como valor de `isLoading`
     - Verificar que `Search_Button.disabled === isLoading` para cualquier valor del estado
     - **Validates: Requirements 5.4, 5.5**
 
-  - [-] 9.5 Escribir tests unitarios para `SearchBar`
+  - [x] 9.5 Escribir tests unitarios para `SearchBar`
     - `Search_Button` deshabilitado cuando `isLoading=true`; presionar Enter llama al mismo handler que el botón; `validationError` visible con texto correcto
     - _Requirements: 1.4, 5.4_
 
@@ -143,68 +143,68 @@ Implementación incremental de una SPA client-side en TypeScript con arquitectur
     - Mostrar/ocultar según la prop `visible: boolean`
     - _Requirements: 2.6, 3.5, 5.4, 5.5_
 
-- [ ] 11. Implementar componente `ErrorMessage`
+- [x] 11. Implementar componente `ErrorMessage`
   - [x] 11.1 Implementar el componente `ErrorMessage`
     - Renderizar el mensaje de error en el área fija entre `SearchBar` y `ForecastPanel`
     - Aplicar estilos con fondo/borde visualmente distinto al `ForecastPanel` (accesible: uso de colores + icono)
     - No renderizar nada si `message` es `null`
     - _Requirements: 5.1, 5.3, 5.6, 5.7_
 
-  - [ ] 11.2 Escribir test de propiedad P12 para `ErrorMessage`
+  - [x] 11.2 Escribir test de propiedad P12 para `ErrorMessage`
     - **Property 12: Mensajes de error incluyen causa y acción sugerida**
     - Generador: `fc.constantFrom('EMPTY_INPUT', 'NOT_FOUND', 'GEO_NETWORK', 'WEATHER_NETWORK', 'INCOMPLETE_DATA')`
     - Verificar que el mensaje renderizado para cada tipo de error contiene tanto la descripción de la causa como la acción sugerida al usuario
     - **Validates: Requirements 5.7**
 
-  - [~] 11.3 Escribir tests unitarios para `ErrorMessage`
+  - [x] 11.3 Escribir tests unitarios para `ErrorMessage`
     - `message=null` → componente no se renderiza; `message` con texto → área visible con contenido correcto
     - _Requirements: 5.1, 5.6_
 
-- [ ] 12. Implementar componente `ForecastPanel`
+- [x] 12. Implementar componente `ForecastPanel`
   - [x] 12.1 Implementar el componente `ForecastPanel`
     - Mostrar nombre de ciudad, temperatura en °C, humedad relativa en % y precipitación en mm
     - No renderizar si `data` es `null`
     - Incluir unidades visibles junto a cada valor
     - _Requirements: 4.1, 4.2, 4.3, 4.4_
 
-  - [~] 12.2 Escribir test de propiedad P8 para `ForecastPanel`
+  - [x] 12.2 Escribir test de propiedad P8 para `ForecastPanel`
     - **Property 8: ForecastPanel renderiza todos los campos con unidades correctas**
     - Generador: `fc.record({ cityName: fc.string({ minLength: 1 }), temperatureCelsius: fc.float(), relativeHumidityPercent: fc.integer({ min: 0, max: 100 }), precipitationMm: fc.float({ min: 0 }) })`
     - Verificar que el DOM renderizado incluye: nombre de ciudad, valor de temperatura + "°C", valor de humedad + "%", valor de precipitación + "mm"
     - **Validates: Requirements 4.1, 4.2, 4.3, 4.4**
 
-  - [~] 12.3 Escribir test de propiedad P9 para `ForecastPanel`
+  - [x] 12.3 Escribir test de propiedad P9 para `ForecastPanel`
     - **Property 9: Nueva búsqueda reemplaza el pronóstico anterior**
     - Generador: `fc.tuple(forecastDataArb, forecastDataArb).filter(([a, b]) => a.cityName !== b.cityName)`
     - Renderizar con primer `ForecastData`, actualizar al segundo, verificar que el panel muestra únicamente los datos del segundo
     - **Validates: Requirements 4.5**
 
-  - [~] 12.4 Escribir tests unitarios para `ForecastPanel`
+  - [x] 12.4 Escribir tests unitarios para `ForecastPanel`
     - `data=null` → panel no renderizado; `data` con valores → todos los campos visibles con unidades
     - _Requirements: 4.1, 4.6_
 
-- [~] 13. Checkpoint — Verificar componentes UI
+- [x] 13. Checkpoint — Verificar componentes UI
   - Asegurarse de que todos los tests de las tareas 9–12 pasan. Preguntar al usuario si tiene dudas.
 
-- [ ] 14. Integrar y conectar todos los componentes
-  - [~] 14.1 Crear el componente raíz `App` y conectar `WeatherController` con los componentes UI
+- [x] 14. Integrar y conectar todos los componentes
+  - [x] 14.1 Crear el componente raíz `App` y conectar `WeatherController` con los componentes UI
     - Instanciar `InputValidator`, `GeocodingService`, `WeatherService`, `StateManager` y `WeatherController`
     - Suscribir los componentes UI al `StateManager` para que reflejen el `AppState` reactivamente
     - Pasar `onSearch`, `isLoading`, `validationError`, `serviceError` y `forecast` a los componentes correspondientes
     - _Requirements: 1.1, 1.2, 2.6, 3.5, 4.1, 4.5, 5.1, 5.2, 5.4, 5.5_
 
-  - [~] 14.2 Aplicar los mensajes de error localizados definidos en la tabla de errores del diseño
+  - [x] 14.2 Aplicar los mensajes de error localizados definidos en la tabla de errores del diseño
     - Mapear cada `GeocodingErrorKind` y `WeatherErrorKind` al mensaje de usuario correspondiente (causa + acción sugerida)
     - Asegurarse de que el `validationError` usa el mensaje "El nombre de la ciudad es requerido."
     - _Requirements: 5.3, 5.6, 5.7_
 
-  - [~] 14.3 Escribir tests de integración para el flujo completo
+  - [x] 14.3 Escribir tests de integración para el flujo completo
     - Flujo exitoso end-to-end (mock de ambas APIs): input → geocoding → forecast → ForecastPanel visible
     - Flujo con ciudad no encontrada: ErrorMessage visible, ForecastPanel no visible
     - Flujo con error de red en WeatherService: ErrorMessage visible, loading oculto
     - _Requirements: 2.1, 2.2, 2.3, 3.1, 3.2, 4.1, 5.2, 5.5_
 
-- [~] 15. Checkpoint final — Validación completa
+- [x] 15. Checkpoint final — Validación completa
   - Asegurarse de que todos los tests pasan (unitarios, de propiedad e integración). Preguntar al usuario si tiene dudas.
 
 ## Notes

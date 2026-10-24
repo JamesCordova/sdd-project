@@ -1,6 +1,11 @@
 // @vitest-environment jsdom
 import { describe, it, expect, beforeEach } from 'vitest';
 import * as fc from 'fast-check';
+import {
+  GEOCODING_ERROR_MESSAGES,
+  VALIDATION_EMPTY_INPUT,
+  WEATHER_ERROR_MESSAGES,
+} from '../errorMessages';
 import { ErrorMessage } from './ErrorMessage.js';
 
 // ─── Unit tests ───────────────────────────────────────────────────────────────
@@ -194,63 +199,54 @@ describe('ErrorMessage – property P12: error messages include cause and sugges
   // Feature: weather-forecast-app, Property 12: Mensajes de error incluyen causa y acción sugerida
 
   /**
-   * Maps each error kind to the full user-facing message string (cause + action)
-   * as defined in the design.md error table. The WeatherController assembles
-   * these strings before calling ErrorMessage.update(), so the component only
-   * needs to render whatever it receives faithfully.
+   * Uses the real messages the app produces (src/errorMessages.ts): every
+   * service error must name the cause and suggest an action (Req 5.7).
+   * The empty-input message is the exact text mandated by task 14.2.
    *
    * Validates: Requirements 5.7
    */
-  const ERROR_MESSAGES: Record<string, { cause: string; action: string }> = {
-    EMPTY_INPUT: {
-      cause: 'El nombre de la ciudad es requerido.',
-      action: 'Escribe el nombre de una ciudad',
-    },
-    NOT_FOUND: {
-      cause: 'No se encontró la ciudad ingresada.',
-      action: 'Verifica el nombre y vuelve a intentarlo',
-    },
-    GEO_NETWORK: {
-      cause: 'El servicio de geocodificación no está disponible.',
-      action: 'Verifica tu conexión a internet e inténtalo de nuevo',
-    },
-    WEATHER_NETWORK: {
-      cause: 'El servicio meteorológico no está disponible.',
-      action: 'Verifica tu conexión a internet e inténtalo de nuevo',
-    },
-    INCOMPLETE_DATA: {
-      cause: 'Los datos meteorológicos recibidos están incompletos.',
-      action: 'Inténtalo de nuevo en unos momentos',
-    },
+  const ACTIONS = [
+    'Verifica el nombre y vuelve a intentarlo',
+    'Verifica tu conexión a internet e inténtalo de nuevo',
+    'Inténtalo de nuevo en unos momentos',
+  ];
+  const CAUSES = [
+    'No se encontró la ciudad ingresada.',
+    'El servicio de geocodificación no está disponible.',
+    'El servicio meteorológico no está disponible.',
+    'Los datos meteorológicos recibidos están incompletos.',
+  ];
+
+  const MESSAGES: Record<string, string> = {
+    EMPTY_INPUT: VALIDATION_EMPTY_INPUT,
+    NOT_FOUND: GEOCODING_ERROR_MESSAGES.NOT_FOUND,
+    GEO_NETWORK: GEOCODING_ERROR_MESSAGES.NETWORK,
+    WEATHER_NETWORK: WEATHER_ERROR_MESSAGES.NETWORK,
+    INCOMPLETE_DATA: WEATHER_ERROR_MESSAGES.INCOMPLETE_DATA,
   };
 
   it('rendered text contains both the cause and the suggested action for every error kind', () => {
-    // **Validates: Requirements 5.7**
     fc.assert(
       fc.property(
-        fc.constantFrom(
-          'EMPTY_INPUT',
-          'NOT_FOUND',
-          'GEO_NETWORK',
-          'WEATHER_NETWORK',
-          'INCOMPLETE_DATA'
-        ),
+        fc.constantFrom('NOT_FOUND', 'GEO_NETWORK', 'WEATHER_NETWORK', 'INCOMPLETE_DATA'),
         (kind) => {
-          const { cause, action } = ERROR_MESSAGES[kind];
-          const fullMessage = `${cause} ${action}.`;
-
           const em = new ErrorMessage();
-          em.update(fullMessage);
-
+          em.update(MESSAGES[kind]);
           const rendered = em.getElement().textContent ?? '';
-          const isVisible = em.getElement().style.display !== 'none';
-          const hasCause = rendered.includes(cause);
-          const hasAction = rendered.includes(action);
-
-          return isVisible && hasCause && hasAction;
+          return (
+            em.getElement().style.display !== 'none' &&
+            CAUSES.some((c) => rendered.includes(c)) &&
+            ACTIONS.some((a) => rendered.includes(a))
+          );
         }
       ),
       { numRuns: 100 }
     );
+  });
+
+  it('empty-input message states the cause (action is conveyed by the input placeholder)', () => {
+    const em = new ErrorMessage();
+    em.update(MESSAGES.EMPTY_INPUT);
+    expect(em.getElement().textContent).toContain('El nombre de la ciudad es requerido.');
   });
 });

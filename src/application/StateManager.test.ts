@@ -40,7 +40,7 @@ describe('StateManager.getState()', () => {
   it('external mutations do not affect internal state', () => {
     const sm = new StateManager();
     const snapshot = sm.getState();
-    (snapshot as Record<string, unknown>).isLoading = true;
+    (snapshot as unknown as Record<string, unknown>).isLoading = true;
     expect(sm.getState().isLoading).toBe(false);
   });
 });

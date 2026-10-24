@@ -11,8 +11,8 @@ import { SearchBar } from './SearchBar';
 
 // jsdom is provided by vitest's default environment
 function makeSearchBar() {
-  const onSearch = vi.fn<[string], void>();
-  const onClearValidationError = vi.fn<[], void>();
+  const onSearch = vi.fn<(cityName: string) => void>();
+  const onClearValidationError = vi.fn<() => void>();
   const bar = new SearchBar({ onSearch, onClearValidationError });
   return { bar, onSearch, onClearValidationError };
 }
@@ -250,8 +250,8 @@ describe('SearchBar – PBT P1: character limit on input (Requirement 1.3)', () 
   it('onSearch is called with at most 100 characters for any input string', () => {
     fc.assert(
       fc.property(fc.string({ maxLength: 200 }), (rawValue) => {
-        const onSearch = vi.fn<[string], void>();
-        const onClearValidationError = vi.fn<[], void>();
+        const onSearch = vi.fn<(cityName: string) => void>();
+        const onClearValidationError = vi.fn<() => void>();
         const bar = new SearchBar({ onSearch, onClearValidationError });
 
         const input = bar.getElement().querySelector('input[type="text"]') as HTMLInputElement;
@@ -280,8 +280,8 @@ describe('SearchBar – PBT P3: editing input clears validation error (Requireme
   it('onClearValidationError is called whenever input fires an input event', () => {
     fc.assert(
       fc.property(fc.string({ minLength: 1 }), (errorMessage) => {
-        const onSearch = vi.fn<[string], void>();
-        const onClearValidationError = vi.fn<[], void>();
+        const onSearch = vi.fn<(cityName: string) => void>();
+        const onClearValidationError = vi.fn<() => void>();
         const bar = new SearchBar({ onSearch, onClearValidationError });
 
         // Set a validation error state
@@ -305,8 +305,8 @@ describe('SearchBar – PBT P10: button disabled state mirrors isLoading (Requir
   it('Search_Button.disabled === isLoading for any boolean value', () => {
     fc.assert(
       fc.property(fc.boolean(), (isLoading) => {
-        const onSearch = vi.fn<[string], void>();
-        const onClearValidationError = vi.fn<[], void>();
+        const onSearch = vi.fn<(cityName: string) => void>();
+        const onClearValidationError = vi.fn<() => void>();
         const bar = new SearchBar({ onSearch, onClearValidationError });
 
         bar.update({ isLoading, validationError: null });
