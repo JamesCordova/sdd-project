@@ -1,0 +1,549 @@
+{
+  "pbtResults": {
+    "2.3 Escribir test de propiedad P2 para `InputValidator`": {
+      "status": "passed",
+      "lastRunTimestamp": 1792986313270
+    },
+    "4.3 Escribir test de propiedad P6 para `WeatherService`": {
+      "status": "passed",
+      "lastRunTimestamp": 1792986384245
+    },
+    "4.4 Escribir test de propiedad P7 para `WeatherService`": {
+      "status": "passed",
+      "lastRunTimestamp": 1792986453867
+    },
+    "6.2 Escribir test de propiedad P11 para `StateManager`": {
+      "status": "passed",
+      "lastRunTimestamp": 1792986951619
+    },
+    "7.4 Escribir test de propiedad P5 para `WeatherController`": {
+      "status": "passed",
+      "lastRunTimestamp": 1792987410422
+    },
+    "7.3 Escribir test de propiedad P4 para `WeatherController`": {
+      "status": "passed",
+      "lastRunTimestamp": 1793006679284
+    }
+  },
+  "executionHistory": {
+    "1. Configurar estructura del proyecto e interfaces centrales": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985421422
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985433378
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985832947
+      }
+    ],
+    "2.1 Implementar la clase `InputValidator`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985421707
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985835907
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985915270
+      }
+    ],
+    "2.2 Escribir tests unitarios para `InputValidator`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985421902
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986229778
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986393790
+      }
+    ],
+    "2.3 Escribir test de propiedad P2 para `InputValidator`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985422056
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986232644
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986396288
+      }
+    ],
+    "3.1 Implementar la clase `GeocodingService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985422237
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985838375
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986219221
+      }
+    ],
+    "3.2 Escribir tests unitarios para `GeocodingService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985422550
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986235772
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986399225
+      }
+    ],
+    "4.1 Implementar la clase `WeatherService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985422738
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985840678
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986223537
+      }
+    ],
+    "4.2 Escribir tests unitarios para `WeatherService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985422897
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986238800
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986402235
+      }
+    ],
+    "4.3 Escribir test de propiedad P6 para `WeatherService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985423027
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986242012
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986404957
+      }
+    ],
+    "4.4 Escribir test de propiedad P7 para `WeatherService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985423171
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986407448
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986842670
+      }
+    ],
+    "5. Checkpoint — Verificar servicios y validador": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985423449
+      }
+    ],
+    "6.1 Implementar la clase `StateManager`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985423648
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986409832
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986845871
+      }
+    ],
+    "6.2 Escribir test de propiedad P11 para `StateManager`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985423811
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986851600
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986962315
+      }
+    ],
+    "7.1 Implementar la clase `WeatherController`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985423978
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986854050
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986966026
+      }
+    ],
+    "7.2 Escribir tests unitarios para `WeatherController`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985424136
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986970142
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006702849
+      }
+    ],
+    "7.3 Escribir test de propiedad P4 para `WeatherController`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985424326
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986972874
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006707566
+      }
+    ],
+    "7.4 Escribir test de propiedad P5 para `WeatherController`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985424552
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986975852
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006710935
+      }
+    ],
+    "8. Checkpoint — Verificar capa de aplicación": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985424735
+      }
+    ],
+    "9.1 Implementar el componente `SearchBar`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985424898
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986978607
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006715583
+      }
+    ],
+    "9.2 Escribir test de propiedad P1 para `SearchBar`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425062
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006897511
+      }
+    ],
+    "9.3 Escribir test de propiedad P3 para `SearchBar`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425200
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793007203239
+      }
+    ],
+    "9.4 Escribir test de propiedad P10 para `SearchBar`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425346
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793007206759
+      }
+    ],
+    "9.5 Escribir tests unitarios para `SearchBar`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425483
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793007209895
+      }
+    ],
+    "10.1 Implementar el componente `LoadingIndicator`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425645
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986981556
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006718891
+      }
+    ],
+    "11.1 Implementar el componente `ErrorMessage`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425836
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006723394
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006890392
+      }
+    ],
+    "11.2 Escribir test de propiedad P12 para `ErrorMessage`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985425989
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793007213874
+      }
+    ],
+    "11.3 Escribir tests unitarios para `ErrorMessage`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985426131
+      }
+    ],
+    "12.1 Implementar el componente `ForecastPanel`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985426338
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006728361
+      },
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006893827
+      }
+    ],
+    "12.2 Escribir test de propiedad P8 para `ForecastPanel`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985426598
+      }
+    ],
+    "12.3 Escribir test de propiedad P9 para `ForecastPanel`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985426853
+      }
+    ],
+    "12.4 Escribir tests unitarios para `ForecastPanel`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985427051
+      }
+    ],
+    "13. Checkpoint — Verificar componentes UI": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985427240
+      }
+    ],
+    "14.1 Crear el componente raíz `App` y conectar `WeatherController` con los componentes UI": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985427401
+      }
+    ],
+    "14.2 Aplicar los mensajes de error localizados definidos en la tabla de errores del diseño": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985427566
+      }
+    ],
+    "14.3 Escribir tests de integración para el flujo completo": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985427751
+      }
+    ],
+    "15. Checkpoint final — Validación completa": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792985427967
+      }
+    ],
+    "2. Implementar `InputValidator`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986396451
+      }
+    ],
+    "3. Implementar `GeocodingService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986399538
+      }
+    ],
+    "4. Implementar `WeatherService`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986843107
+      }
+    ],
+    "6. Implementar `StateManager`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1792986962912
+      }
+    ],
+    "7. Implementar `WeatherController`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006711514
+      }
+    ],
+    "10. Implementar componente `LoadingIndicator`": [
+      {
+        "executionId": "046dd9b0-e520-46d0-bfc4-bc029ffcff72",
+        "chatSessionId": "sess_bc6e3f72-328e-4b14-b6eb-4867e8d59c30",
+        "timestamp": 1793006719254
+      }
+    ]
+  }
+}
